@@ -1,2 +1,6 @@
-# String-Calculator
-String Calculator kata implemented using TypeScript and Jest following Test-Driven Development (TDD) principles.
+# String Calculator
+
+## Run tests
+
+npm install
+npm test
