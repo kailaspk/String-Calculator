@@ -2,10 +2,10 @@ export class StringCalculator {
   add(numbers: string): number {
     if (!numbers) return 0;
 
-    if (!numbers.includes(",")) {
-      return parseInt(numbers);
-    }
+    const parts = numbers.split(",");
 
-    return 0;
+    // convert to numbers and sum
+    const sum = parts.reduce((acc, curr) => acc + parseInt(curr, 10), 0);
+    return sum;
   }
 }
