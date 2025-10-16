@@ -12,7 +12,15 @@ export class StringCalculator {
     }
 
     const tokens = numbers.split(delimiter);
-    const sum = tokens.reduce((acc, curr) => acc + parseInt(curr, 10), 0);
-    return sum;
+    const numArray = tokens
+      .map((t) => parseInt(t, 10))
+      .filter((n) => !isNaN(n));
+
+    const negatives = numArray.filter((n) => n < 0);
+    if (negatives.length > 0) {
+      throw new Error(`negative numbers not allowed ${negatives.join(",")}`);
+    }
+
+    return numArray.reduce((sum, n) => sum + n, 0);
   }
 }
