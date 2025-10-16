@@ -1,0 +1,28 @@
+{
+  "name": "string-calculator",
+  "version": "1.0.0",
+  "description": "String Calculator kata implemented using TypeScript and Jest following Test-Driven Development (TDD) principles.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kailaspk/String-Calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kailaspk/String-Calculator/issues"
+  },
+  "homepage": "https://github.com/kailaspk/String-Calculator#readme",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.4.5",
+    "typescript": "^5.9.3"
+  }
+}
