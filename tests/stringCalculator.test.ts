@@ -15,4 +15,9 @@ describe("StringCalculator", () => {
     const calc = new StringCalculator();
     expect(calc.add("1,2")).toBe(3);
   });
+
+  test("returns sum of any amount of comma-separated numbers", () => {
+    const calc = new StringCalculator();
+    expect(calc.add("1,2,3,4,5")).toBe(15);
+  });
 });
