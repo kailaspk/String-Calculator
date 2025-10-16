@@ -2,9 +2,17 @@ export class StringCalculator {
   add(numbers: string): number {
     if (!numbers) return 0;
 
-    const parts = numbers.split(/,|\n/);
+    let delimiter = /,|\n/;
 
-    const sum = parts.reduce((acc, curr) => acc + parseInt(curr, 10), 0);
+    if (numbers.startsWith("//")) {
+      const parts = numbers.split("\n");
+      const delimiterPart = parts[0].substring(2);
+      delimiter = new RegExp(delimiterPart);
+      numbers = parts[1];
+    }
+
+    const tokens = numbers.split(delimiter);
+    const sum = tokens.reduce((acc, curr) => acc + parseInt(curr, 10), 0);
     return sum;
   }
 }

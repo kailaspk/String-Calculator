@@ -25,4 +25,9 @@ describe("StringCalculator", () => {
     const calc = new StringCalculator();
     expect(calc.add("1\n2,3")).toBe(6);
   });
+
+  test("supports custom delimiter defined in first line", () => {
+    const calc = new StringCalculator();
+    expect(calc.add("//;\n1;2")).toBe(3);
+  });
 });
